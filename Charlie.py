@@ -39,3 +39,4 @@ class ScreenManagerApp(App):
 
 if __name__ == '__main__':
     ScreenManagerApp().run()
+    except KeyboardInterrupt:
