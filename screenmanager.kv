@@ -17,7 +17,11 @@
 
     Label:
         font_size: 42
-        text: root.name
+        text: 'RPM'
+		
+	Label:
+        font_size: 56
+        text: '4000'
 
     Button:
         text: 'Next screen'
@@ -32,47 +36,6 @@
         size: 150, 50
         on_release: root.manager.current = root.manager.previous()
 
-    BoxLayout:
-        size_hint: .5, None
-        height: 250
-        pos_hint: {'center_x': .5}
-        orientation: 'vertical'
 
-        Button:
-            text: 'Use SlideTransition with "up" direction'
-            on_release: root.manager.transition = SlideTransition(direction="up")
 
-        Button:
-            text: 'Use SlideTransition with "down" direction'
-            on_release: root.manager.transition = SlideTransition(direction="down")
-
-        Button:
-            text: 'Use SlideTransition with "left" direction'
-            on_release: root.manager.transition = SlideTransition(direction="left")
-
-        Button:
-            text: 'Use SlideTransition with "right" direction'
-            on_release: root.manager.transition = SlideTransition(direction="right")
-
-        Button:
-            text: 'Use SwapTransition'
-            on_release: root.manager.transition = SwapTransition()
-
-        Button:
-            text: 'Use WipeTransition'
-            on_release: root.manager.transition = WipeTransition()
-
-        Button:
-            text: 'Use FadeTransition'
-            on_release: root.manager.transition = FadeTransition()
-
-        Button:
-            text: 'Use FallOutTransition'
-            on_release: root.manager.transition = FallOutTransition()
-
-        Button:
-            text: 'Use RiseInTransition'
-            on_release: root.manager.transition = RiseInTransition()
-        Button:
-            text: 'Use NoTransition'
-            on_release: root.manager.transition = NoTransition(duration=0)
+       
