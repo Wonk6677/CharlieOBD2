@@ -15,13 +15,17 @@
         Rectangle:
             size: self.size
 
-    Label:
-        font_size: 42
-        text: 'RPM'
+	Boxlayout
+		pos_hint: {'center_x':center_y'}
+		orientation: 'vertical'
 		
-	Label:
-        font_size: 56
-        text: '4000'
+		Label:
+			font_size: 42
+			text: 'RPM'
+		
+		Label:
+			font_size: 56
+			text: '4000'
 
     Button:
         text: 'Next screen'
