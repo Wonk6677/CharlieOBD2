@@ -13,12 +13,13 @@
         Color:
             hsv: self.hue, .5, .3
         Rectangle:
+			pos: self.pos
             size: self.size
 
 	BoxLayout:
+		pos: self.parent.pos
 		orientation: 'vertical'
-		center:root.center
-		
+				
 		Label:
 			font_size: 42
 			text: 'RPM'
