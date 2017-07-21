@@ -6,9 +6,10 @@
 #:import RiseInTransition kivy.uix.screenmanager.RiseInTransition
 #:import FallOutTransition kivy.uix.screenmanager.FallOutTransition
 #:import NoTransition kivy.uix.screenmanager.NoTransition
+import kivy
 
-<CustomScreen>:
-    canvas.before:
+<Mainscreen>:
+    canvas:
         Color:
             hsv: 122, 94, 21
         Rectangle:
