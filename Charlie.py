@@ -15,7 +15,7 @@ class ScreenManagerApp(App):
     def build(self):
         root = ScreenManager()
        # for x in range(4):
-            root.add_widget(MainScreen(name='Screen1'))
+        root.add_widget(MainScreen(name='Screen1'))
         return root
 
 if __name__ == '__main__':
