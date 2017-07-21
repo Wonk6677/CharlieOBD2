@@ -8,11 +8,11 @@
 #:import NoTransition kivy.uix.screenmanager.NoTransition
 
 <Mainscreen>:
+	hue: 122
     canvas:
         Color:
-            hsv: 122, 94, 21
+            hsv: self.hue, 94, 21
         Rectangle:
-			pos: self.pos
             size: self.size
 
 	BoxLayout:
