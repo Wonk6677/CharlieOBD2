@@ -6,7 +6,7 @@ from kivy.lang import Builder
 Builder.load_file('screenmanager.kv')
 
 
-#class MainScreen(Screen):
+class MainScreen(Screen):
  #   hue = NumericProperty(122)
 
 
