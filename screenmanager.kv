@@ -6,18 +6,16 @@
 #:import RiseInTransition kivy.uix.screenmanager.RiseInTransition
 #:import FallOutTransition kivy.uix.screenmanager.FallOutTransition
 #:import NoTransition kivy.uix.screenmanager.NoTransition
+#:from kivy.core.window import Window
 
 <MainScreen>:
     canvas:
         Color:
             hsv: 122, 94, 21
         Rectangle:
-            size: self.size
+            size: Window.size
 
 	BoxLayout:
-	    canvas:
-	        Color:
-                hsv: 122, 94, 21
 		size: 400,400
 		pos: self.parent.pos
 		orientation: 'vertical'
