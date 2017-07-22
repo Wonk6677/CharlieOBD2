@@ -24,7 +24,6 @@ class MainScreen(Screen):
 
 
 class ScreenManagerApp(App):
-    rpm = sensors.rpm
     def build(self):
         root = ScreenManager()
        # for x in range(4):
