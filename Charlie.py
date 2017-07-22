@@ -14,6 +14,7 @@ from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import NumericProperty
 from kivy.lang import Builder
+from kivy.graphics import *
 
 #-------------------------------------
 connection = obd.OBD() #automagically connects to car ECU
