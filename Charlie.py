@@ -31,7 +31,7 @@ class ScreenManagerApp(App):
         root.add_widget(MainScreen(name='Screen1'))
         return root
 
-    def OBDRPM():
+    def obdrpm(self):
         #while True:
         #    RPM = obd.commands.RPM
         #    response = connection.query(RPM)
