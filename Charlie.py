@@ -32,13 +32,14 @@ class ScreenManagerApp(App):
         return root
 
     def OBDRPM():
-        while True:
+        #while True:
         #    RPM = obd.commands.RPM
         #    response = connection.query(RPM)
-        #     return (response.value)
-            w="2000 or something"  #place holder while not in car
-            return w               #place holder while not in car
-            time.sleep(1)
+        #    return (response.value)
+        #    time.sleep(1)
+        w="2000 or something"  #place holder while not in car
+        return w               #place holder while not in car
+        
 
 if __name__ == '__main__':
     ScreenManagerApp().run()
