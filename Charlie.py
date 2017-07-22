@@ -26,7 +26,6 @@ class MainScreen(Screen):
 
 class ScreenManagerApp(App):
     def build(self):
-        rpm = OBDRPM()
         root = ScreenManager()
        # for x in range(4):
         root.add_widget(MainScreen(name='Screen1'))
