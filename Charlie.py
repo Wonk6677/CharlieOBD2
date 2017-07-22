@@ -172,7 +172,7 @@ Builder.load_file('screenmanager.kv')
 
 
 class MainScreen(Screen):
-    hue = NumericProperty(122)
+ #   hue = NumericProperty(122)
 
 
 class ScreenManagerApp(App):
