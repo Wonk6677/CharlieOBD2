@@ -8,14 +8,15 @@
 ###########################################################################
 
 import os
+import obd
+import time
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import NumericProperty
 from kivy.lang import Builder
 
 #-------------------------------------
-
-
+connection = obd.OBD() #automagically connects to car ECU
 Builder.load_file('screenmanager.kv')
 
 
@@ -25,10 +26,18 @@ class MainScreen(Screen):
 
 class ScreenManagerApp(App):
     def build(self):
+        rpm = OBDRPM()
         root = ScreenManager()
        # for x in range(4):
         root.add_widget(MainScreen(name='Screen1'))
         return root
+
+    def OBDRPM():
+        while True:
+            RPM = obd.commands.RPM
+            response = connection.query(RPM)
+            return (response.value)
+            time.sleep(1)
 
 if __name__ == '__main__':
     ScreenManagerApp().run()
