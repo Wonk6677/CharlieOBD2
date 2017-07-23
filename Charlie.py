@@ -21,7 +21,7 @@ connection = obd.OBD() #automagically connects to car ECU
 Builder.load_file('screenmanager.kv')
 
 
-class MainScreen(Screen):
+class MainScreen(App):
     def obdrpm(self):
         #while True:
         #    RPM = obd.commands.RPM
