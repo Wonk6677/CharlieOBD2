@@ -40,4 +40,4 @@ class MainScreen(Screen):
 #        return root
 
 if __name__ == '__main__':
-    ScreenManagerApp().run()
+    MainScreen().run()
