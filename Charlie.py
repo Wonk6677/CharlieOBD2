@@ -30,8 +30,8 @@ class speed(Screen):
 class ScreenManagerApp(App):
     def build(self):
         root = ScreenManager()
-        sm.add_widget(MainScreen(name='MainScreen'))
-        sm.add_widget(speed(name='speed'))
+        root.add_widget(MainScreen(name='MainScreen'))
+        root.add_widget(speed(name='speed'))
         return root
 
     def obdrpm(self):
