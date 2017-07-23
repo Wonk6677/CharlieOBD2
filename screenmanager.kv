@@ -8,12 +8,14 @@
 #:import NoTransition kivy.uix.screenmanager.NoTransition
 
 <MainScreen>:
-    canvas.before:
+    canvas:
         Color:
-            hsv: (122, 94, 21)
+            hsv: app.hsvcolor
         Rectangle:
             size: self.size
 	BoxLayout:
+	    Color:
+            hsv: app.hsvcolor
 		size: 200,200
 		pos: self.parent.pos
 		orientation: 'vertical'
