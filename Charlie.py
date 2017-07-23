@@ -30,8 +30,6 @@ class speed(Screen):
     pass
 
 class ScreenManagerApp(App):
-    hsvcolor = (122, 91, 21)
-
     def build(self):
         root = ScreenManager()
         root.add_widget(MainScreen(name='MainScreen'))
