@@ -44,6 +44,7 @@ class ScreenManagerApp(App):
         return w
 
     def speed(self):
+        value = NumericProperty()
         while True:
             t = 1
             x = t+1
