@@ -17,6 +17,7 @@ from kivy.lang import Builder
 from kivy.graphics import *
 from kivy.properties import StringProperty
 from kivy.clock import Clock
+import threading
 
 #-------------------------------------
 connection = obd.OBD() #automagically connects to car ECU
@@ -52,6 +53,9 @@ class ScreenManagerApp(App):
             t += 1
             print (t)
             time.sleep(1)
+
+    b = threading.Thread(name='speed', target=background)
+    b.start()
 
 if __name__ == '__main__':
     ScreenManagerApp().run()
