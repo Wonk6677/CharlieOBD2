@@ -21,8 +21,8 @@ connection = obd.OBD() #automagically connects to car ECU
 Builder.load_file('screenmanager.kv')
 
 
-class MainScreen(Screen):
-    self.hue = NumericProperty(122)
+#class MainScreen(Screen):
+    #hue = NumericProperty(122)
 
 
 class ScreenManagerApp(App):
