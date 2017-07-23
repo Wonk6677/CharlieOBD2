@@ -31,7 +31,9 @@
         size_hint: None, None
         pos_hint: {'right': 1}
         size: 150, 50
-        on_release: root.manager.current = 'speed'
+        on_release:
+            root.manager.transition.direction = 'right'
+            root.manager.current = 'speed'
     Button:
         text: 'Previous screen'
         size_hint: None, None
@@ -63,7 +65,9 @@
         size_hint: None, None
         pos_hint: {'right': 1}
         size: 150, 50
-        on_release: root.manager.current = 'MainScreen'
+        on_release:
+            root.manager.transition.direction = 'right'
+            root.manager.current = 'MainScreen'
     Button:
         text: 'Previous screen'
         size_hint: None, None
