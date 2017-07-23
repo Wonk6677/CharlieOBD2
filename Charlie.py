@@ -16,6 +16,7 @@ from kivy.properties import NumericProperty
 from kivy.lang import Builder
 from kivy.graphics import *
 from kivy.properties import StringProperty
+from kivy.clock import Clock
 
 #-------------------------------------
 connection = obd.OBD() #automagically connects to car ECU
@@ -33,6 +34,7 @@ class ScreenManagerApp(App):
         root = ScreenManager()
         root.add_widget(MainScreen(name='MainScreen'))
         root.add_widget(speed(name='speed'))
+        Clock.schedule_interval(self.update, 1)
         return root
 
     def obdrpm(self):
@@ -50,6 +52,7 @@ class ScreenManagerApp(App):
             x = t+1
             t = x
             time.sleep(1)
+            Clock.unschedule(self.update)
             return str(t)
 
 if __name__ == '__main__':
