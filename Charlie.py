@@ -43,8 +43,6 @@ class ScreenManagerApp(App):
         RPM = obd.commands.RPM
         response = connection.query(RPM)
         return str(response.value)
-#        w = "2000 or something"  #place holder while not in car
- #       return w
 
     def speedmph(self):
         y = 1
