@@ -25,18 +25,37 @@
 		Label:
 			font_size: 56
 			text:app.obdrpm()
+<Speed>:
+    canvas:
+        Color:
+            hsv: (122, 94, 21)
+        Rectangle:
+            size: self.size
 
-  #  Button:
-  #      text: 'Next screen'
-  #      size_hint: None, None
-  #      pos_hint: {'right': 1}
-  #      size: 150, 50
-  #      on_release: root.manager.current = root.manager.next()
-  #  Button:
-  #      text: 'Previous screen'
-  #      size_hint: None, None
-  #      size: 150, 50
-  #      on_release: root.manager.current = root.manager.previous()
+    BoxLayout:
+		size: 200,200
+		pos: self.parent.pos
+		orientation: 'vertical'
+
+		Label:
+			font_size: 42
+			text: 'Speed'
+
+		Label:
+			font_size: 56
+			text:app.speed()
+
+    Button:
+        text: 'Next screen'
+        size_hint: None, None
+        pos_hint: {'right': 1}
+        size: 150, 50
+        on_press: root.manager.transition.direction = 'right'
+    Button:
+        text: 'Previous screen'
+        size_hint: None, None
+        size: 150, 50
+        on_press: root.manager.transition.direction = 'left'
 
 
 
