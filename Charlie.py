@@ -47,15 +47,14 @@ class ScreenManagerApp(App):
             #time.sleep(1)
         w = "2000 or something"  #place holder while not in car
         return w
-
+    t=0
     def speedmph(self):
-        t=0
         while True:
             global t
             t += 1
             return str(t)
 
-    Clock.schedule_interval(speedmph, 1.0 / 2)
+    Clock.schedule_interval(speedmph, 1)
 
 if __name__ == '__main__':
     ScreenManagerApp().run()
