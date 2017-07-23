@@ -20,7 +20,7 @@ from kivy.clock import Clock
 
 #-------------------------------------
 connection = obd.OBD() #automagically connects to car ECU
-Builder.load_file('screenmanager.kv')
+#Builder.load_file('screenmanager.kv')
 
 
 class MainScreen(Screen):
@@ -45,10 +45,6 @@ class ScreenManagerApp(App):
         w = "2000 or something"  #place holder while not in car
         return w
 
-
-if __name__ == '__main__':
-    ScreenManagerApp().run()
-
     def speed(self):
         t=1
         while True:
@@ -56,3 +52,6 @@ if __name__ == '__main__':
             time.sleep(1)
 
         return str(t)
+
+if __name__ == '__main__':
+    ScreenManagerApp().run()
