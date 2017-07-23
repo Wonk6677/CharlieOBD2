@@ -9,15 +9,13 @@
 
 import os
 import obd
-import time
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.properties import NumericProperty
 from kivy.lang import Builder
 from kivy.graphics import *
+from kivy.graphics import Color
 from kivy.properties import StringProperty
 from kivy.clock import Clock
-import threading
 
 #-------------------------------------
 connection = obd.OBD() #automagically connects to car ECU
@@ -30,10 +28,9 @@ class MainScreen(Screen):
 class speed(Screen):
     pass
 
-
-
 class ScreenManagerApp(App):
-    hsvcolor = (122, 91, 21)
+    hsvcolor = Color(122, 91, 21, mode='hsv')
+
     def build(self):
         root = ScreenManager()
         root.add_widget(MainScreen(name='MainScreen'))
