@@ -40,13 +40,11 @@ class ScreenManagerApp(App):
         return root
 
     def obdrpm(self):
-        #while True:
-         #   RPM = obd.commands.RPM
-          #  response = connection.query(RPM)
-           # return (response.value)
-            #time.sleep(1)
-        w = "2000 or something"  #place holder while not in car
-        return w
+        RPM = obd.commands.RPM
+        response = connection.query(RPM)
+        return (response.value)
+#        w = "2000 or something"  #place holder while not in car
+ #       return w
 
     def speedmph(self):
         y = 1
@@ -57,6 +55,7 @@ class ScreenManagerApp(App):
             return str(t)
 
     Clock.schedule_interval(speedmph, 1)
+    Clock.schedule_interval(obdrpm, 0.5)
 
 if __name__ == '__main__':
     ScreenManagerApp().run()
