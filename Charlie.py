@@ -17,6 +17,7 @@ from kivy.graphics import *
 from kivy.graphics import Color
 from kivy.properties import StringProperty
 from kivy.clock import Clock
+from kivy.core.window import Window
 
 #-------------------------------------
 connection = obd.OBD() #automagically connects to car ECU
@@ -24,10 +25,10 @@ connection = obd.OBD() #automagically connects to car ECU
 
 
 class MainScreen(Screen):
-    pass
+    Window.clearcolor = (3, 54, 5, 1.0)
 
 class speed(Screen):
-    pass
+    Window.clearcolor = (3, 54, 5, 1.0)
 
 class ScreenManagerApp(App):
     def build(self):
