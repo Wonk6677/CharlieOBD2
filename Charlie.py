@@ -15,6 +15,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import NumericProperty
 from kivy.lang import Builder
 from kivy.graphics import *
+from kivy.properties import StringProperty
 
 #-------------------------------------
 connection = obd.OBD() #automagically connects to car ECU
@@ -25,7 +26,7 @@ class MainScreen(Screen):
     pass
 
 class speed(Screen):
-    pass
+    speedlabel = StringProperty(speed)
 
 class ScreenManagerApp(App):
     def build(self):
@@ -44,7 +45,6 @@ class ScreenManagerApp(App):
         return w
 
     def speed(self):
-        value = NumericProperty()
         while True:
             t = 1
             x = t+1
