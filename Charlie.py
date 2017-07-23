@@ -30,8 +30,7 @@ class MainScreen(Screen):
 class speed(Screen):
     pass
 
-y = 1
-global y
+
 
 class ScreenManagerApp(App):
     def build(self):
@@ -50,6 +49,7 @@ class ScreenManagerApp(App):
         return w
 
     def speedmph(self):
+        y = 1
         while True:
             t = y
             t += 1
