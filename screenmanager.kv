@@ -8,7 +8,7 @@
 #:import NoTransition kivy.uix.screenmanager.NoTransition
 
 <MainScreen>:
-    canvas:
+    canvas.before:
         Color:
             hsv: (122, 94, 21)
         Rectangle:
@@ -31,12 +31,12 @@
         size_hint: None, None
         pos_hint: {'right': 1}
         size: 150, 50
-        on_press: root.manager.transition.direction = 'right'
+        on_release: root.manager.current = 'speed'
     Button:
         text: 'Previous screen'
         size_hint: None, None
         size: 150, 50
-        on_press: root.manager.transition.direction = 'left'
+        on_release: root.manager.current = 'speed'
 
 <Speed>:
     canvas:
@@ -63,12 +63,12 @@
         size_hint: None, None
         pos_hint: {'right': 1}
         size: 150, 50
-        on_press: root.manager.transition.direction = 'right'
+        on_release: root.manager.current = 'MainScreen'
     Button:
         text: 'Previous screen'
         size_hint: None, None
         size: 150, 50
-        on_press: root.manager.transition.direction = 'left'
+        on_release: root.manager.current = 'MainScreen'
 
 
 
