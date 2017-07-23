@@ -14,8 +14,6 @@
         Rectangle:
             size: self.size
 	BoxLayout:
-	    Color:
-            hsv: app.hsvcolor
 		size: 200,200
 		pos: self.parent.pos
 		orientation: 'vertical'
@@ -29,6 +27,9 @@
 			text:app.obdrpm()
 
 	Button:
+	    canvas:
+            Color:
+                hsv: app.hsvcolor
         text: 'Next screen'
         size_hint: None, None
         pos_hint: {'right': 1}
@@ -37,6 +38,9 @@
             root.manager.transition.direction = 'right'
             root.manager.current = 'speed'
     Button:
+        canvas:
+            Color:
+                hsv: app.hsvcolor
         text: 'Previous screen'
         size_hint: None, None
         size: 150, 50
