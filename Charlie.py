@@ -29,7 +29,7 @@ class speed(Screen):
     pass
 
 class ScreenManagerApp(App):
-    hsvcolor = Color(122, 91, 21, mode='hsv')
+    hsvcolor = Color(122, 91, 21)
 
     def build(self):
         root = ScreenManager()
