@@ -50,7 +50,7 @@ class ScreenManagerApp(App):
             x = t+1
             t = x
             time.sleep(1)
-            return t
+            return str(t)
 
 if __name__ == '__main__':
     ScreenManagerApp().run()
