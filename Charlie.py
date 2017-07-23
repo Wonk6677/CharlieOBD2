@@ -54,7 +54,7 @@ class ScreenManagerApp(App):
             print (t)
             time.sleep(1)
 
-    b = threading.Thread(name='speed', target=background)
+    b = threading.Thread(name='speed', target=speed)
     b.start()
 
 if __name__ == '__main__':
