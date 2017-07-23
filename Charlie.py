@@ -48,9 +48,9 @@ class ScreenManagerApp(App):
         w = "2000 or something"  #place holder while not in car
         return w
     t=0
+    global t
     def speedmph(self):
         while True:
-            global t
             t += 1
             return str(t)
 
