@@ -46,6 +46,9 @@ class ScreenManagerApp(App):
         w = "2000 or something"  #place holder while not in car
         return w
 
+    b = threading.Thread(name='speed', target=speed)
+    b.start()
+    
     def speed(self):
         t=0
         while True:
@@ -54,8 +57,7 @@ class ScreenManagerApp(App):
             print (t)
             time.sleep(1)
 
-    b = threading.Thread(name='speed', target=speed)
-    b.start()
+
 
 if __name__ == '__main__':
     ScreenManagerApp().run()
