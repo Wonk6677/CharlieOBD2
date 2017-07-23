@@ -52,7 +52,7 @@ class ScreenManagerApp(App):
         t=0
         global t
         t += 1
-        return t
+        return str(t)
 
     Clock.schedule_interval(speedmph, 1.0 / 2)
 
