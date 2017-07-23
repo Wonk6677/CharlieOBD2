@@ -50,6 +50,7 @@ class ScreenManagerApp(App):
         while True:
             global t
             t += 1
+            print (t)
 
 if __name__ == '__main__':
     ScreenManagerApp().run()
