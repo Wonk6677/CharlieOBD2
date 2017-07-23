@@ -8,8 +8,8 @@
 #:import NoTransition kivy.uix.screenmanager.NoTransition
 
 <MainScreen>:
-    canvas:
-        Color.after:
+    canvas.after:
+        Color:
             hsv: app.hsvcolor
         Rectangle:
             size: self.size
