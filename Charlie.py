@@ -50,9 +50,10 @@ class ScreenManagerApp(App):
 
     def speedmph(self):
         t=0
-        global t
-        t += 1
-        return str(t)
+        while True
+            global t
+            t += 1
+            return str(t)
 
     Clock.schedule_interval(speedmph, 1.0 / 2)
 
