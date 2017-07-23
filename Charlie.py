@@ -51,6 +51,7 @@ class ScreenManagerApp(App):
             global t
             t += 1
             print (t)
+            time.sleep(1)
 
 if __name__ == '__main__':
     ScreenManagerApp().run()
