@@ -50,7 +50,7 @@ class ScreenManagerApp(App):
 
     def speedmph(self):
         t=0
-        while True
+        while True:
             global t
             t += 1
             return str(t)
