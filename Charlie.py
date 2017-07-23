@@ -55,7 +55,10 @@ class ScreenManagerApp(App):
             time.sleep(1)
 
     b = threading.Thread(name=speedmph, target=speedmph)
-    b.start()
+    c = threading.Thread(name=obdrpm, target=obdrpm)
 
+    b.start()
+    c.start()
+    
 if __name__ == '__main__':
     ScreenManagerApp().run()
