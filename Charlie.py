@@ -46,12 +46,10 @@ class ScreenManagerApp(App):
         return w
 
     def speed(self):
-        t=1
+        t=0
         while True:
+            global t
             t += 1
-            time.sleep(1)
-
-        return str(t)
 
 if __name__ == '__main__':
     ScreenManagerApp().run()
