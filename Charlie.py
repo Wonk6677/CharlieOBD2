@@ -30,7 +30,8 @@ class MainScreen(Screen):
 class speed(Screen):
     pass
 
-
+y = 1
+global y
 
 class ScreenManagerApp(App):
     def build(self):
@@ -50,8 +51,9 @@ class ScreenManagerApp(App):
 
     def speedmph(self):
         while True:
-            global t
+            t = y
             t += 1
+            y = t
             return str(t)
 
     Clock.schedule_interval(speedmph, 1)
