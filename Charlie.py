@@ -53,6 +53,6 @@ class ScreenManagerApp(App):
             return t
 
     speedlabel = StringProperty(speed)
-    
+
 if __name__ == '__main__':
     ScreenManagerApp().run()
