@@ -30,6 +30,8 @@ class MainScreen(Screen):
 class speed(Screen):
     pass
 
+
+
 class ScreenManagerApp(App):
     def build(self):
         root = ScreenManager()
@@ -48,17 +50,11 @@ class ScreenManagerApp(App):
 
     def speedmph(self):
         t=0
-        while True:
-            global t
-            t += 1
-            print (t)
-            time.sleep(1)
+        global t
+        t += 1
+        print (t)
 
-    b = threading.Thread(name=speedmph, target=speedmph)
-    c = threading.Thread(name=obdrpm, target=obdrpm)
+    Clock.schedule_interval(speedmph, 1.0 / 2)
 
-    b.start()
-    c.start()
-    
 if __name__ == '__main__':
     ScreenManagerApp().run()
