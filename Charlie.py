@@ -26,7 +26,7 @@ class MainScreen(Screen):
     pass
 
 class speed(Screen):
-    speedlabel = StringProperty(speed)
+    pass
 
 class ScreenManagerApp(App):
     def build(self):
@@ -52,5 +52,7 @@ class ScreenManagerApp(App):
             time.sleep(1)
             return t
 
+    speedlabel = StringProperty(speed)
+    
 if __name__ == '__main__':
     ScreenManagerApp().run()
