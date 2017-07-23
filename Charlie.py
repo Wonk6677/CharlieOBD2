@@ -21,17 +21,7 @@ connection = obd.OBD() #automagically connects to car ECU
 Builder.load_file('screenmanager.kv')
 
 
-#class MainScreen(Screen):
-    #hue = NumericProperty(122)
-
-
-class ScreenManagerApp(App):
-    def build(self):
-        root = ScreenManager()
-       # for x in range(4):
-        root.add_widget(MainScreen(name='Screen1'))
-        return root
-
+class MainScreen(Screen):
     def obdrpm(self):
         #while True:
         #    RPM = obd.commands.RPM
@@ -39,8 +29,15 @@ class ScreenManagerApp(App):
         #    return (response.value)
         #    time.sleep(1)
         w = "2000 or something"  #place holder while not in car
-        return w               #place holder while not in car
+        return w
 
+
+#class ScreenManagerApp(App):
+#    def build(self):
+ #       root = ScreenManager()
+#       # for x in range(4):
+#        root.add_widget(MainScreen(name='Screen1'))
+#        return root
 
 if __name__ == '__main__':
     ScreenManagerApp().run()
