@@ -44,7 +44,7 @@ class ScreenManagerApp(App):
         return w
 
     def speed(self):
-        while true:
+        while True:
             t = 1
             x = t+1
             t = x
